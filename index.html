@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Pizza Palace | Home</title>
+</head>
+
+<body>
+
+    <!-- Pizza Image with details -->
+
+    <div class="container-fluid container-img">
+        <div class="header-container">
+            <h2 class="main-header">Pizza Palace</h2>
+            <p class="main-text">An Oasis of Pleasure!</p>
+        </div>
+    </div>
+<div class="container-fluid">
+    <!-- Flex Box with pizza selections -->
+    <div class="row justify-content-center m-3">
+        <div class="col img-width">
+            <div class="card" id="chickenPizza">
+                <div class="card-body d-flex justify-content-center">
+                    <img src="./img/pizza1.jpeg" width="420px" alt="">
+                </div>
+                <div class="pizza-label text-center"><p>Chiken Pizza</p></div>
+            </div>
+        </div>
+        <div class="col img-width">
+            <div class="card" id="beefPizza">
+                <div class="card-body d-flex justify-content-center">
+                    <img src="./img/pizza4.jpeg" width="450px"  alt="">                    
+                </div>
+                <div class="pizza-label text-center"><p>Beef Pizza</p></div>
+            </div>
+        </div>
+        <div class="col img-width">
+            <div class="card" id="vegetablePizza">
+                <div class="card-body d-flex justify-content-center">
+                    <img src="./img/pizza3.jpeg" width="450px"  alt="">
+                </div>
+                <div class="pizza-label text-center"><p>Vegetable Pizza</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center m-3">
+        <div class="col img-width">
+            <div class="card" id="mgPizza">
+                <div class="card-body d-flex justify-content-center">
+                    <img src="./img/pizza1.jpeg" width="420px" alt="">
+                </div>
+                <div class="pizza-label text-center"><p>Margheritta Pizza</p></div>
+            </div>
+        </div>
+        <div class="col img-width">
+            <div class="card" id="bbq">
+                <div class="card-body d-flex justify-content-center">
+                    <img src="./img/pizza4.jpeg" width="450px"  alt="">                    
+                </div>
+                <div class="pizza-label text-center"><p>BBQ Steak</p></div>
+            </div>
+        </div>
+        <div class="col img-width">
+            <div class="card" id="tikka">
+                <div class="card-body d-flex justify-content-center">
+                    <img src="./img/pizza3.jpeg" width="450px"  alt="">
+                </div>
+                <div class="pizza-label text-center"><p> Chicken Tikka</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <hr>
+    <!-- footer -->
+    <div class="container-fluid p-2">
+        <div class="row">
+            <div class="col-12 text-center">
+                Pizza Palace <br>
+                @2020
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--  Pizza Options Modal  -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="options" tabindex="-1" aria-labelledby="optionsLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><label id="optionTitle">Pizza Name</label></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            
+          <select class="form-control mt-2" id="size">
+            <option value="" disabled selected>-- Select Size --</option>
+            <option value="Small">Small</option>
+            <option value="Regular">Regular</option>
+            <option value="Large">Large</option>
+          </select>
+                   
+          <select class="form-control mt-2" id="topping">
+            <option value="" disabled selected>-- Toppings --</option>            
+            <option value="Onions">Onions</option>
+            <option value="Mashrooms">Mashroom</option>
+            <option value="Salad">Salad</option>
+            <option value="Cheese">Cheese</option>
+          </select>
+          <select class="form-control mt-2" id="crust">
+            <option value="" disabled selected>-- Crust --</option>
+            <option value="Crispy">Crispy</option>
+            <option value="Stuffed">Stuffed</option>
+            <option value="Glutten Free">Glutten Free</option>
+          </select>
+
+          <button id="gotoCheckout" class="btn btn-success w-100 mt-3">Next ></button>
+        </div>       
+      </div>
+    </div>
+  </div>
+
+  
+<div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Order CheckOut</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+            <table class="table" id="orderTable">
+                <thead>
+                  <tr>
+                    <th scope="col" width="30%">Pizza</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Crust</th>
+                    <th scope="col">Topping</th>
+                    <th scope="col">QTY</th>
+                  </tr>
+                </thead>
+                <tbody>
+                              
+                </tbody>                
+            </table> 
+          <button type="button" id="gotoLocation" class="btn btn-success w-100">Next ></button>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="locationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Delivery Options</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Deliver this Order to your location ? <input type="checkbox" id="delivery">
+          <input type="text" id="locationText" placeholder="Enter Location" class="form-control mt-2">
+          <button type="button" id="gotoFinal" class="btn btn-success w-100 mt-2">Next ></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="finalModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Order Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <h6>Order Detail</h6>
+            <hr>
+            <b>Pizza name: </b> <label id="nametxt"></label> <br>
+            <b>Topping: </b> <label id="toppingtxt"></label>   <br>
+            <b>Crust:</b> <label id="crusttxt"></label>    <br>
+            <b>Size: </b> <label id="sizetxt"></label>     <br>
+            <b>Quantity:</b> <label id="qtytxt"></label>
+            <hr>
+            <h6>Cost Details</h6> <br>            
+            <b>Cost: </b> KES. <label id="netcost"></label> <br>   <!--PRICE SIZE + tOPPING-->     
+            <b>Delivery: </b> KES. <label id="deltxt"></label> <br>
+            <b>Discount: </b> KES. <label id="discount"></label> <br>
+            <b>Total Cost: </b> KES. <label id="total"></label>
+          <button type="button" id="finish" class="btn btn-success w-100 mt-2">Finish</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" 
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+        <script src="./js/main.js"></script>
+</body>
+
+</html>
